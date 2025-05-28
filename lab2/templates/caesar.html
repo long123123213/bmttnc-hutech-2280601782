@@ -11,23 +11,39 @@
                 <td style="text-align: center; font-weight: bold; font-size: 25px;">CAESAR CIPHER</td>
             </tr>
             <tr>
-                <td style="font-weight: bold; color: blue;">ENCRYPTION</td>
+                <td style="font-weight: bold; color: blue;">ENCRYPT</td>
             </tr>
             <tr>
                 <td>
-                    <div class="mb-3">
-                        <label class="form-label">Plain text:</label>
-                        <input type="text" class="form-control" value="{{text}}" readonly>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Key:</label>
-                        <input type="text" class="form-control" value="{{key}}" readonly>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Encrypted text:</label>
-                        <input type="text" class="form-control" value="{{encrypted_text}}" readonly>
-                    </div>
-                    <a href="/caesar" class="btn btn-primary">Back</a>
+                    <form method="POST" action="/encrypt">
+                        <div class="mb-3">
+                            <label class="form-label">Plain text:</label>
+                            <input type="text" class="form-control" name="inputPlainText" placeholder="Input Plain Text" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Key:</label>
+                            <input type="number" class="form-control" name="inputKeyPlain" placeholder="Input Key" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Encrypt</button>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold; color: blue;">DECRYPT</td>
+            </tr>
+            <tr>
+                <td>
+                    <form method="POST" action="/decrypt">
+                        <div class="mb-3">
+                            <label class="form-label">Cipher text:</label>
+                            <input type="text" class="form-control" name="inputCipherText" placeholder="Input Cipher Text" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Key:</label>
+                            <input type="number" class="form-control" name="inputKeyCipher" placeholder="Input Key" required>
+                        </div>
+                        <button type="submit" class="btn btn-success">Decrypt</button>
+                    </form>
                 </td>
             </tr>
         </table>

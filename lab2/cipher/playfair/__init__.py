@@ -1,1 +1,1 @@
-from .playfair_cipher import PlayFairCipher
+from .playfair_cipher import PlayfairCipher
