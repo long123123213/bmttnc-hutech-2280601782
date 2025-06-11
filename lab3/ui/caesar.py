@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '.\ui\caesar.ui'
+# Form implementation generated from reading ui file './ui/caesar.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.11
 #
@@ -9,56 +9,45 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+import os
+os.environ['QT_QPA_PLATFORM_PLUGIN_PATH'] = "../platforms"
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(740, 546)
+        MainWindow.resize(498, 324)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
-        self.btn_ec = QtWidgets.QPushButton(self.centralwidget)
-        self.btn_ec.setGeometry(QtCore.QRect(190, 390, 75, 23))
-        self.btn_ec.setObjectName("btn_ec")
-        self.btn_dc = QtWidgets.QPushButton(self.centralwidget)
-        self.btn_dc.setGeometry(QtCore.QRect(400, 390, 75, 23))
-        self.btn_dc.setObjectName("btn_dc")
-        self.txt_plaintext = QtWidgets.QListWidget(self.centralwidget)
-        self.txt_plaintext.setGeometry(QtCore.QRect(140, 90, 481, 61))
-        self.txt_plaintext.setObjectName("txt_plaintext")
         self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(300, 30, 241, 41))
-        font = QtGui.QFont()
-        font.setPointSize(16)
-        self.label.setFont(font)
+        self.label.setGeometry(QtCore.QRect(190, 10, 121, 16))
         self.label.setObjectName("label")
-        self.txt_key = QtWidgets.QListWidget(self.centralwidget)
-        self.txt_key.setGeometry(QtCore.QRect(140, 190, 471, 31))
-        self.txt_key.setObjectName("txt_key")
-        self.txt_ciphertext = QtWidgets.QListWidget(self.centralwidget)
-        self.txt_ciphertext.setGeometry(QtCore.QRect(140, 260, 481, 61))
-        self.txt_ciphertext.setObjectName("txt_ciphertext")
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
-        self.label_2.setGeometry(QtCore.QRect(50, 110, 71, 16))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.label_2.setFont(font)
+        self.label_2.setGeometry(QtCore.QRect(40, 50, 51, 16))
         self.label_2.setObjectName("label_2")
         self.label_3 = QtWidgets.QLabel(self.centralwidget)
-        self.label_3.setGeometry(QtCore.QRect(50, 200, 71, 16))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.label_3.setFont(font)
+        self.label_3.setGeometry(QtCore.QRect(40, 120, 35, 10))
         self.label_3.setObjectName("label_3")
         self.label_4 = QtWidgets.QLabel(self.centralwidget)
-        self.label_4.setGeometry(QtCore.QRect(50, 280, 71, 16))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.label_4.setFont(font)
+        self.label_4.setGeometry(QtCore.QRect(40, 160, 41, 16))
         self.label_4.setObjectName("label_4")
+        self.textEdit = QtWidgets.QTextEdit(self.centralwidget)
+        self.textEdit.setGeometry(QtCore.QRect(100, 50, 331, 51))
+        self.textEdit.setObjectName("textEdit")
+        self.textEdit_2 = QtWidgets.QTextEdit(self.centralwidget)
+        self.textEdit_2.setGeometry(QtCore.QRect(100, 120, 331, 21))
+        self.textEdit_2.setObjectName("textEdit_2")
+        self.textEdit_3 = QtWidgets.QTextEdit(self.centralwidget)
+        self.textEdit_3.setGeometry(QtCore.QRect(100, 160, 331, 64))
+        self.textEdit_3.setObjectName("textEdit_3")
+        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton.setGeometry(QtCore.QRect(160, 250, 56, 17))
+        self.pushButton.setObjectName("pushButton")
+        self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_2.setGeometry(QtCore.QRect(320, 250, 56, 17))
+        self.pushButton_2.setObjectName("pushButton_2")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 740, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 498, 18))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -71,12 +60,12 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.btn_ec.setText(_translate("MainWindow", "Encrypt"))
-        self.btn_dc.setText(_translate("MainWindow", "Decrypt"))
-        self.label.setText(_translate("MainWindow", " Caesar Cipher"))
-        self.label_2.setText(_translate("MainWindow", "plain_text  : "))
-        self.label_3.setText(_translate("MainWindow", "key :"))
-        self.label_4.setText(_translate("MainWindow", "cipher_text  : "))
+        self.label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:14pt; font-weight:600;\">CAESAR CIPHER</span></p></body></html>"))
+        self.label_2.setText(_translate("MainWindow", "Plain Text:"))
+        self.label_3.setText(_translate("MainWindow", "Key:"))
+        self.label_4.setText(_translate("MainWindow", "CipherText:"))
+        self.pushButton.setText(_translate("MainWindow", "Encrypt"))
+        self.pushButton_2.setText(_translate("MainWindow", "Decrypt"))
 
 
 if __name__ == "__main__":
